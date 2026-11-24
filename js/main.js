@@ -31,7 +31,43 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', closeMenu);
   });
 
-  // Contact form: native submission handled by FormSubmit
+  // Contact Form Handling with EmailJS
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+  emailjs.init({
+    publicKey: 'n6LNvLqzQmbES1aFF'
+  });
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Envoi en cours...';
+
+    try {
+      await emailjs.sendForm(
+        'service_77w3m3e',
+        'template_pjzdw8v',
+        contactForm
+      );
+
+      alert('Merci ! Votre message a été envoyé avec succès.');
+      contactForm.reset();
+
+    } catch (error) {
+      console.error('Erreur EmailJS :', error);
+      alert("Une erreur est survenue lors de l'envoi. Veuillez réessayer.");
+
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+    }
+  });
+}
 
   // Interactive Filter for Projects Hub if present
   const filterBtns = document.querySelectorAll('.project-filter-btn');
