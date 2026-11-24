@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Méthodologie | Aaron Bignon Romuald DOSSOU - Marketing 360°</title>
+  <meta name="description" content="Découvrez le cadre méthodologique en 5 étapes d'Aaron Bignon Romuald DOSSOU : Diagnostic, Stratégie, Planification, Déploiement et Pilotage ROI.">
+  <link rel="icon" href="images/portrait.jpg" type="image/jpeg">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0c1a34',
+            'navy-soft': '#1d2d4c',
+            'brand-orange': '#ef6c22',
+            surface: '#f3f4f7',
+            border: 'rgba(12, 26, 52, 0.1)',
+          },
+          fontFamily: {
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="flex min-h-screen flex-col bg-background text-foreground antialiased font-sans">
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-50 transition-all duration-300 border-b border-border/60 bg-white/90 backdrop-blur-md">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 md:px-8">
+      
+      <a href="index.html" class="group rounded-md flex items-center gap-3.5" aria-label="Aaron Bignon DOSSOU, accueil">
+        <span class="relative flex size-11 items-center justify-center rounded-full font-serif text-lg bg-navy text-white shadow-sm transition-transform group-hover:scale-105">
+          AD
+          <span class="absolute top-0.5 right-0.5 size-2.5 rounded-full bg-brand-orange ring-2 ring-white"></span>
+        </span>
+        <span class="flex flex-col leading-tight">
+          <span class="text-sm font-bold text-navy tracking-tight group-hover:text-brand-orange transition-colors">Aaron Bignon DOSSOU</span>
+          <span class="text-xs text-muted-foreground font-medium">Marketing 360° · Chef de projet</span>
+        </span>
+      </a>
+
+      <nav class="hidden xl:flex items-center gap-1 text-sm">
+        <a href="index.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Accueil</a>
+        <a href="a-propos.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">À propos</a>
+        <a href="expertises.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Expertises</a>
+        <a href="etude-de-cas.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Étude de cas</a>
+        <a href="realisations.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Réalisations</a>
+        <a href="methodologie.html" class="relative rounded-md px-3.5 py-2 font-semibold text-navy transition-colors hover:text-brand-orange after:absolute after:bottom-0 after:left-3.5 after:right-3.5 after:h-0.5 after:bg-brand-orange">Méthodologie</a>
+        <a href="formation.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Formations</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden sm:inline-flex items-center justify-center rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-orange hover:shadow-md">
+          Me contacter
+        </a>
+        <button id="menu-btn" type="button" class="xl:hidden inline-flex items-center justify-center rounded-lg p-2 text-navy hover:bg-surface focus:outline-none" aria-label="Ouvrir le menu">
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 xl:hidden">
+    <div id="mobile-backdrop" class="fixed inset-0 bg-navy/60 backdrop-blur-sm transition-opacity"></div>
+    <div class="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-white p-6 shadow-2xl flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-border">
+          <div class="flex items-center gap-3">
+            <span class="relative flex size-10 items-center justify-center rounded-full font-serif text-lg bg-navy text-white">
+              AD
+              <span class="absolute top-0.5 right-0.5 size-2 rounded-full bg-brand-orange"></span>
+            </span>
+            <span class="text-sm font-bold text-navy">Aaron Bignon DOSSOU</span>
+          </div>
+          <button id="close-menu-btn" class="p-2 text-navy/70 hover:text-navy rounded-lg hover:bg-surface" aria-label="Fermer le menu">
+            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+        </div>
+        
+        <nav class="flex flex-col gap-2 mt-6">
+          <a href="index.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">Accueil</a>
+          <a href="a-propos.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">À propos</a>
+          <a href="expertises.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">Expertises</a>
+          <a href="etude-de-cas.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">Étude de cas (E-Clean)</a>
+          <a href="realisations.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">Réalisations</a>
+          <a href="methodologie.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-semibold text-brand-orange bg-surface">Méthodologie</a>
+          <a href="formation.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">Formations</a>
+          <a href="contact.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">Contact</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-border flex flex-col gap-3">
+        <a href="contact.html" class="w-full inline-flex items-center justify-center rounded-full bg-navy py-3 text-sm font-semibold text-white shadow-sm hover:bg-brand-orange transition-colors">
+          Me contacter
+        </a>
+        <div class="text-xs text-center text-navy/60">
+          dossouromuald39@gmail.com · +229 67 23 27 80
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO HEADER -->
+    <section class="relative overflow-hidden bg-navy text-white">
+      <div class="decorative-ring-1"></div>
+      <div class="decorative-ring-2"></div>
+
+      <div class="mx-auto w-full max-w-7xl px-5 md:px-8 relative flex flex-col gap-6 py-20 md:py-28">
+        <p class="flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-brand-orange uppercase">
+          <span class="h-px w-8 bg-brand-orange" aria-hidden="true"></span>
+          Méthodologie
+        </p>
+        <h1 class="max-w-4xl font-serif text-5xl leading-[1.02] text-balance md:text-7xl">
+          Cinq étapes pour passer de l’intention à l’impact.
+        </h1>
+        <p class="max-w-2xl text-lg leading-relaxed text-pretty text-white/70">
+          Un cadre de travail structuré, adapté à chaque mission, qui garantit la cohérence des choix, le respect des délais et la lisibilité des résultats chiffrés.
+        </p>
+
+        <!-- Visual 5 Steps Progress Timeline -->
+        <ol class="mt-8 grid grid-cols-5 gap-3" aria-label="Étapes de la méthode">
+          <li class="flex flex-col gap-2">
+            <span class="h-1.5 rounded-full bg-brand-orange"></span>
+            <span class="text-xs text-white/80 font-bold hidden sm:block">01. Diagnostic</span>
+          </li>
+          <li class="flex flex-col gap-2">
+            <span class="h-1.5 rounded-full bg-brand-orange/60"></span>
+            <span class="text-xs text-white/80 font-bold hidden sm:block">02. Stratégie</span>
+          </li>
+          <li class="flex flex-col gap-2">
+            <span class="h-1.5 rounded-full bg-brand-orange/60"></span>
+            <span class="text-xs text-white/80 font-bold hidden sm:block">03. Planification</span>
+          </li>
+          <li class="flex flex-col gap-2">
+            <span class="h-1.5 rounded-full bg-brand-orange/60"></span>
+            <span class="text-xs text-white/80 font-bold hidden sm:block">04. Déploiement</span>
+          </li>
+          <li class="flex flex-col gap-2">
+            <span class="h-1.5 rounded-full bg-brand-orange/60"></span>
+            <span class="text-xs text-white/80 font-bold hidden sm:block">05. Pilotage</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- LES 5 ÉTAPES EN DÉTAIL -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="mx-auto w-full max-w-7xl px-5 md:px-8 flex flex-col gap-10">
+        
+        <!-- Étape 1 -->
+        <article class="group grid gap-8 rounded-3xl border border-border p-8 bg-surface transition-all hover:border-brand-orange hover:bg-white md:grid-cols-12 md:p-12 card-hover">
+          <div class="md:col-span-3 flex flex-col justify-between">
+            <span class="font-serif text-6xl font-bold text-brand-orange">01</span>
+            <div class="mt-4">
+              <span class="text-xs font-semibold tracking-wider text-navy/50 uppercase">Phase initiale</span>
+              <h3 class="text-xl font-bold text-navy">Diagnostic & Immersion</h3>
+            </div>
+          </div>
+          <div class="md:col-span-9 flex flex-col gap-4">
+            <h4 class="font-serif text-2xl font-bold text-navy">
+              Comprendre l’écosystème, auditer l'existant et identifier les freins de croissance.
+            </h4>
+            <p class="text-sm leading-relaxed text-navy/75">
+              Avant de concevoir la moindre action, nous analysons votre historique de performance (taux de conversion, panier moyen, délais de réponse), votre environnement concurrentiel et vos retours clients. Nous élaborons la matrice Démarrer / Arrêter / Continuer pour clarifier les priorités sans ambiguïté.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Audit marketing</span>
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Matrice SWOT</span>
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Diagnostic de réputation</span>
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Analyse de conversion</span>
+            </div>
+            <div class="mt-4 pt-4 border-t border-border flex items-center justify-between text-xs">
+              <span class="font-bold uppercase tracking-wider text-brand-orange">Livrable clé</span>
+              <span class="font-semibold text-navy">Rapport de diagnostic stratégique partagé & matrice D/A/C</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Étape 2 -->
+        <article class="group grid gap-8 rounded-3xl border border-border p-8 bg-surface transition-all hover:border-brand-orange hover:bg-white md:grid-cols-12 md:p-12 card-hover">
+          <div class="md:col-span-3 flex flex-col justify-between">
+            <span class="font-serif text-6xl font-bold text-brand-orange">02</span>
+            <div class="mt-4">
+              <span class="text-xs font-semibold tracking-wider text-navy/50 uppercase">Phase de cadrage</span>
+              <h3 class="text-xl font-bold text-navy">Stratégie & Positionnement</h3>
+            </div>
+          </div>
+          <div class="md:col-span-9 flex flex-col gap-4">
+            <h4 class="font-serif text-2xl font-bold text-navy">
+              Bâtir une proposition de valeur différenciante et fixer des objectifs quantifiés.
+            </h4>
+            <p class="text-sm leading-relaxed text-navy/75">
+              Nous formalisons votre plateforme de marque (mission, vision, valeurs et signature) et segmentons votre audience B2B pour comprendre les attentes de chaque décideur (DG, DRH, gestionnaires). Nous structurons l'offre avec des engagements précis et fixons les objectifs chiffrés de campagne.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Plateforme de marque</span>
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Proposition de valeur</span>
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Segmentation B2B</span>
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Objectifs SMART</span>
+            </div>
+            <div class="mt-4 pt-4 border-t border-border flex items-center justify-between text-xs">
+              <span class="font-bold uppercase tracking-wider text-brand-orange">Livrable clé</span>
+              <span class="font-semibold text-navy">Plateforme de marque & Définition de l'offre commerciale</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Étape 3 -->
+        <article class="group grid gap-8 rounded-3xl border border-border p-8 bg-surface transition-all hover:border-brand-orange hover:bg-white md:grid-cols-12 md:p-12 card-hover">
+          <div class="md:col-span-3 flex flex-col justify-between">
+            <span class="font-serif text-6xl font-bold text-brand-orange">03</span>
+            <div class="mt-4">
+              <span class="text-xs font-semibold tracking-wider text-navy/50 uppercase">Phase d'ingénierie</span>
+              <h3 class="text-xl font-bold text-navy">Planification & Briefs</h3>
+            </div>
+          </div>
+          <div class="md:col-span-9 flex flex-col gap-4">
+            <h4 class="font-serif text-2xl font-bold text-navy">
+              Décliner les actions selon la méthode QQOQCCP et sécuriser le budget.
+            </h4>
+            <p class="text-sm leading-relaxed text-navy/75">
+              Chaque action est documentée (Qui, Quoi, Où, Quand, Comment, Combien, Pourquoi) et intégrée dans un rétroplanning sous Excel avec identification des dépendances techniques. Nous rédigeons les briefs créatifs pour les prestataires externes (graphistes, vidéastes) avec clauses juridiques et marges de sécurité.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Méthode QQOQCCP</span>
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Rétroplanning Excel</span>
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Brief créatif</span>
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Budget de référence</span>
+            </div>
+            <div class="mt-4 pt-4 border-t border-border flex items-center justify-between text-xs">
+              <span class="font-bold uppercase tracking-wider text-brand-orange">Livrable clé</span>
+              <span class="font-semibold text-navy">Plan d'actions opérationnel & Rétroplanning budgété</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Étape 4 -->
+        <article class="group grid gap-8 rounded-3xl border border-border p-8 bg-surface transition-all hover:border-brand-orange hover:bg-white md:grid-cols-12 md:p-12 card-hover">
+          <div class="md:col-span-3 flex flex-col justify-between">
+            <span class="font-serif text-6xl font-bold text-brand-orange">04</span>
+            <div class="mt-4">
+              <span class="text-xs font-semibold tracking-wider text-navy/50 uppercase">Phase opérationnelle</span>
+              <h3 class="text-xl font-bold text-navy">Déploiement 360° & Phygital</h3>
+            </div>
+          </div>
+          <div class="md:col-span-9 flex flex-col gap-4">
+            <h4 class="font-serif text-2xl font-bold text-navy">
+              Orchestrer les canaux physiques et digitaux dans un parcours sans rupture.
+            </h4>
+            <p class="text-sm leading-relaxed text-navy/75">
+              Nous activons la campagne en trois temps (Teasing, Lancement Jour J, Amplification post-événement). Tous les supports imprimés (brochures, cartes commerciales, affichage) et digitaux (LinkedIn, relations presse, web) convergent grâce à des QR codes vers une landing page unique et un formulaire de diagnostic relié au CRM.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Cartographie phygitale</span>
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Activation LinkedIn</span>
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Relations presse & RP</span>
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Passerelles QR Codes</span>
+            </div>
+            <div class="mt-4 pt-4 border-t border-border flex items-center justify-between text-xs">
+              <span class="font-bold uppercase tracking-wider text-brand-orange">Livrable clé</span>
+              <span class="font-semibold text-navy">Supports de communication produits & Campagne déployée</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Étape 5 -->
+        <article class="group grid gap-8 rounded-3xl border border-border p-8 bg-surface transition-all hover:border-brand-orange hover:bg-white md:grid-cols-12 md:p-12 card-hover">
+          <div class="md:col-span-3 flex flex-col justify-between">
+            <span class="font-serif text-6xl font-bold text-brand-orange">05</span>
+            <div class="mt-4">
+              <span class="text-xs font-semibold tracking-wider text-navy/50 uppercase">Phase d'optimisation</span>
+              <h3 class="text-xl font-bold text-navy">Pilotage, Données & ROI</h3>
+            </div>
+          </div>
+          <div class="md:col-span-9 flex flex-col gap-4">
+            <h4 class="font-serif text-2xl font-bold text-navy">
+              Mesurer les indicateurs clés, optimiser le CAC et pérenniser la rentabilité.
+            </h4>
+            <p class="text-sm leading-relaxed text-navy/75">
+              Nous consolidons l'entonnoir de prospection dans un tableau de bord Excel pour suivre en direct les leads qualifiés, les devis signés, les dépenses réelles et le chiffre d'affaires généré. Nous calculons le ROI net et produisons une synthèse managériale orientée action (« Quoi / Donc / Et maintenant »).
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Dashboard Excel</span>
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Calcul du CAC</span>
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Mesure du ROI</span>
+              <span class="rounded-full bg-white px-3 py-1 text-xs text-navy/80 font-semibold border border-border">Synthèse managériale</span>
+            </div>
+            <div class="mt-4 pt-4 border-t border-border flex items-center justify-between text-xs">
+              <span class="font-bold uppercase tracking-wider text-brand-orange">Livrable clé</span>
+              <span class="font-semibold text-navy">Tableau de bord de rentabilité & Recommandations d'arbitrage</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- BANNIÈRE CTA -->
+    <section class="bg-navy py-16 text-white border-t border-white/10">
+      <div class="mx-auto w-full max-w-7xl px-5 md:px-8 text-center flex flex-col items-center gap-6">
+        <h2 class="font-serif text-3xl sm:text-4xl max-w-2xl">
+          Envie d’appliquer cette rigueur méthodologique à votre entreprise ?
+        </h2>
+        <p class="text-white/70 max-w-xl text-base">
+          Échangeons sur vos enjeux actuels et établissons ensemble votre plan d'action marketing.
+        </p>
+        <a href="contact.html" class="rounded-full bg-brand-orange px-8 py-3.5 text-sm font-bold text-navy hover:bg-white transition-all">
+          Planifier un premier diagnostic
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy text-white border-t border-white/10">
+    <div class="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-2 md:px-8 lg:grid-cols-4">
+      
+      <div class="flex flex-col gap-5 lg:col-span-1">
+        <span class="flex items-center gap-3">
+          <span class="relative flex size-10 items-center justify-center rounded-full font-serif text-lg bg-white text-navy font-bold">
+            AD
+            <span class="absolute top-0.5 right-0.5 size-2 rounded-full bg-brand-orange"></span>
+          </span>
+          <span class="flex flex-col leading-tight">
+            <span class="text-sm font-bold text-white">Aaron Bignon DOSSOU</span>
+            <span class="text-xs text-white/60">Marketing 360°</span>
+          </span>
+        </span>
+        <p class="text-sm leading-relaxed text-white/65">
+          Stratégie, coordination et performance au service de vos projets.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="mb-4 text-xs font-semibold tracking-[0.2em] text-brand-orange uppercase">Navigation</h3>
+        <ul class="flex flex-col gap-2.5 text-sm text-white/75">
+          <li><a class="hover:text-white transition-colors" href="index.html">Accueil</a></li>
+          <li><a class="hover:text-white transition-colors" href="a-propos.html">À propos</a></li>
+          <li><a class="hover:text-white transition-colors" href="expertises.html">Expertises</a></li>
+          <li><a class="hover:text-white transition-colors" href="etude-de-cas.html">Étude de cas (E-Clean)</a></li>
+          <li><a class="hover:text-white transition-colors" href="realisations.html">Réalisations</a></li>
+          <li><a class="hover:text-white transition-colors" href="methodologie.html">Méthodologie</a></li>
+          <li><a class="hover:text-white transition-colors" href="formation.html">Formations</a></li>
+          <li><a class="hover:text-white transition-colors" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="mb-4 text-xs font-semibold tracking-[0.2em] text-brand-orange uppercase">Expertises</h3>
+        <ul class="flex flex-col gap-2.5 text-sm text-white/75">
+          <li><a class="hover:text-white transition-colors" href="expertises.html#strategie-marketing">Stratégie marketing</a></li>
+          <li><a class="hover:text-white transition-colors" href="expertises.html#gestion-de-projet">Gestion de projet</a></li>
+          <li><a class="hover:text-white transition-colors" href="expertises.html#communication-360">Communication 360°</a></li>
+          <li><a class="hover:text-white transition-colors" href="expertises.html#marketing-digital">Marketing digital</a></li>
+          <li><a class="hover:text-white transition-colors" href="expertises.html#acquisition-conversion">Acquisition et conversion</a></li>
+          <li><a class="hover:text-white transition-colors" href="expertises.html#analyse-performance">Analyse et pilotage</a></li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-3">
+        <h3 class="mb-1 text-xs font-semibold tracking-[0.2em] text-brand-orange uppercase">Contact direct</h3>
+        <ul class="flex flex-col gap-2.5 text-sm text-white/75">
+          <li class="flex items-center gap-2">
+            <svg class="size-4 text-brand-orange shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>Grand-Popo & Cotonou, Bénin</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="size-4 text-brand-orange shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <a href="mailto:dossouromuald39@gmail.com" class="hover:text-white transition-colors">dossouromuald39@gmail.com</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="size-4 text-brand-orange shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <a href="tel:+22967232780" class="hover:text-white transition-colors">+229 67 23 27 80</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="size-4 text-brand-orange shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <a href="https://www.linkedin.com/in/romuald01" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">linkedin.com/in/romuald01</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/10 py-6 text-center text-xs text-white/50 px-5">
+      © 2026 Aaron Bignon Romuald DOSSOU. Tous droits réservés. · Consultant indépendant en marketing 360° — Bénin.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

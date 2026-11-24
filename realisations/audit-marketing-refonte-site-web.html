@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit marketing et refonte d’un site web | Aaron Bignon Romuald DOSSOU</title>
+  <meta name="description" content="Étude de cas : Diagnostic digital, refonte ergonomique UX/UI et optimisation du tunnel de conversion par Aaron Bignon Romuald DOSSOU.">
+  <link rel="icon" href="../images/portrait.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0c1a34',
+            'navy-soft': '#1d2d4c',
+            'brand-orange': '#ef6c22',
+            surface: '#f3f4f7',
+            border: 'rgba(12, 26, 52, 0.1)',
+          },
+          fontFamily: {
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="flex min-h-screen flex-col bg-background text-foreground antialiased font-sans">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 transition-all duration-300 border-b border-border/60 bg-white/90 backdrop-blur-md">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 md:px-8">
+      <a href="../index.html" class="group rounded-md flex items-center gap-3.5" aria-label="Aaron Bignon DOSSOU, accueil">
+        <span class="relative flex size-11 items-center justify-center rounded-full font-serif text-lg bg-navy text-white shadow-sm transition-transform group-hover:scale-105">
+          AD
+          <span class="absolute top-0.5 right-0.5 size-2.5 rounded-full bg-brand-orange ring-2 ring-white"></span>
+        </span>
+        <span class="flex flex-col leading-tight">
+          <span class="text-sm font-bold text-navy tracking-tight group-hover:text-brand-orange transition-colors">Aaron Bignon DOSSOU</span>
+          <span class="text-xs text-muted-foreground font-medium">Marketing 360° · Chef de projet</span>
+        </span>
+      </a>
+
+      <nav class="hidden xl:flex items-center gap-1 text-sm">
+        <a href="../index.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Accueil</a>
+        <a href="../a-propos.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">À propos</a>
+        <a href="../expertises.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Expertises</a>
+        <a href="../etude-de-cas.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Étude de cas</a>
+        <a href="../realisations.html" class="relative rounded-md px-3.5 py-2 font-semibold text-navy transition-colors hover:text-brand-orange after:absolute after:bottom-0 after:left-3.5 after:right-3.5 after:h-0.5 after:bg-brand-orange">Réalisations</a>
+        <a href="../methodologie.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Méthodologie</a>
+        <a href="../formation.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Formations</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="../contact.html" class="hidden sm:inline-flex items-center justify-center rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-orange hover:shadow-md">
+          Me contacter
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <!-- HEADER SOMBRE -->
+      <header class="bg-navy text-white relative overflow-hidden">
+        <div class="decorative-ring-1"></div>
+        <div class="decorative-ring-2"></div>
+
+        <div class="mx-auto w-full max-w-7xl px-5 md:px-8 flex flex-col gap-8 pt-12 pb-16 md:pt-16 md:pb-24 relative z-10">
+          <a class="inline-flex items-center gap-2 self-start text-sm text-white/70 transition-colors hover:text-white" href="../realisations.html">
+            <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+            Toutes les réalisations
+          </a>
+
+          <div class="flex flex-col gap-4">
+            <p class="flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-brand-orange uppercase">
+              <span class="h-px w-8 bg-brand-orange" aria-hidden="true"></span>
+              Réalisation 01 · Stratégie digitale
+            </p>
+            <h1 class="max-w-4xl font-serif text-4xl leading-[1.05] tracking-tight md:text-6xl text-white">
+              Audit marketing et refonte d’un site web
+            </h1>
+            <p class="max-w-2xl text-lg leading-relaxed text-white/75">
+              Diagnostic de la présence digitale d’une organisation et recommandations pour un site web plus clair, plus utile et orienté conversion.
+            </p>
+          </div>
+
+          <dl class="grid gap-6 border-t border-white/15 pt-8 sm:grid-cols-3">
+            <div class="flex flex-col gap-1">
+              <dt class="text-xs font-semibold tracking-[0.18em] text-brand-orange uppercase">Client / Cadre</dt>
+              <dd class="text-sm font-semibold text-white/90">Organisation professionnelle</dd>
+            </div>
+            <div class="flex flex-col gap-1">
+              <dt class="text-xs font-semibold tracking-[0.18em] text-brand-orange uppercase">Période</dt>
+              <dd class="text-sm font-semibold text-white/90">Mission de conseil</dd>
+            </div>
+            <div class="flex flex-col gap-1">
+              <dt class="text-xs font-semibold tracking-[0.18em] text-brand-orange uppercase">Rôle</dt>
+              <dd class="text-sm font-semibold text-white/90">Consultant marketing digital & UX</dd>
+            </div>
+          </dl>
+        </div>
+      </header>
+
+      <!-- CONTENU DU PROJET -->
+      <div class="py-16 md:py-24 bg-white">
+        <div class="mx-auto w-full max-w-7xl px-5 md:px-8 flex flex-col gap-12">
+          
+          <div class="grid gap-12 lg:grid-cols-12">
+            <div class="lg:col-span-8 flex flex-col gap-6 text-sm leading-relaxed text-navy/80">
+              <h2 class="font-serif text-3xl font-bold text-navy">Contexte & Diagnostic Chiffré</h2>
+              <p>
+                L'entreprise faisait face à un paradoxe critique : malgré une <strong>hausse de trafic de +45 %</strong>, le <strong>taux de rebond culminait à 75 %</strong>, le <strong>taux de conversion des demandes de devis était tombé à 0,8 %</strong> et le <strong>chiffre d'affaires avait régressé de 15 %</strong>. L'audit marketing 360° a révélé un décalage flagrant entre les promesses d'acquisition et l'expérience sur le site.
+              </p>
+
+              <h2 class="font-serif text-3xl font-bold text-navy mt-4">Cahier des Charges & Cadrage de Projet</h2>
+              <p>
+                Coordination de la réunion de validation du 16 octobre 2026 et rédaction du cahier des charges complet (15 sections) pour encadrer la prestation de l'agence de développement :
+              </p>
+              <ul class="flex flex-col gap-3 pl-4 border-l-2 border-brand-orange">
+                <li>• <strong>Exigences techniques & Core Web Vitals :</strong> Objectif strict de vitesse mobile (LCP ≤ 2 s, score PageSpeed ≥ 90/100, disponibilité contractuelle ≥ 99,5 %).</li>
+                <li>• <strong>Parcours utilisateur & Maquettage Figma :</strong> Conception des wireframes et maquettes UI responsive adaptées aux résolutions 390 px, 768 px et 1440 px.</li>
+                <li>• <strong>Contrôle budgétaire & Planning contractuel :</strong> Enveloppe budgétaire arrêtée à <strong>1 900 000 FCFA TTC</strong> (sans dépassement autorisé sans avenant écrit) et déploiement cadencé du 2 novembre 2026 au 19 janvier 2027.</li>
+                <li>• <strong>Grille de recette en 10 points :</strong> Tests obligatoires sur l'affichage mobile, navigation au clavier, formulaires de devis, clics WhatsApp, tracking GA4/GTM et sécurité SSL.</li>
+              </ul>
+
+              <h2 class="font-serif text-3xl font-bold text-navy mt-4">Résultats Obtenus</h2>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 rounded-2xl bg-surface border border-border">
+                <div class="flex flex-col">
+                  <span class="text-xs uppercase text-navy/50 font-bold">Budget maîtrisé</span>
+                  <span class="font-serif text-2xl font-bold text-navy">1,9 M</span>
+                  <span class="text-[11px] text-navy/60">FCFA TTC au centime</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs uppercase text-navy/50 font-bold">Vitesse mobile</span>
+                  <span class="font-serif text-2xl font-bold text-emerald-600">≤ 1,8 s</span>
+                  <span class="text-[11px] text-navy/60">LCP sur mobile</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs uppercase text-navy/50 font-bold">Taux de rebond</span>
+                  <span class="font-serif text-2xl font-bold text-brand-orange">-32 pts</span>
+                  <span class="text-[11px] text-navy/60">Rebond réduit à 43%</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs uppercase text-navy/50 font-bold">Conversion devis</span>
+                  <span class="font-serif text-2xl font-bold text-emerald-600">3,4 %</span>
+                  <span class="text-[11px] text-navy/60">vs 0,8% avant refonte</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sidebar Métriques -->
+            <div class="lg:col-span-4 flex flex-col gap-6">
+              <div class="rounded-3xl bg-surface p-7 border border-border flex flex-col gap-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">Livrables contractuels</span>
+                <ul class="flex flex-col gap-2.5 text-xs text-navy/80">
+                  <li class="flex items-center gap-2">✓ Cahier des charges exhaustif (9 pages)</li>
+                  <li class="flex items-center gap-2">✓ Modèle de compte-rendu de réunion & arbitrages</li>
+                  <li class="flex items-center gap-2">✓ Wireframes & composants UI Figma</li>
+                  <li class="flex items-center gap-2">✓ Plan de marquage GA4 & Google Tag Manager</li>
+                  <li class="flex items-center gap-2">✓ Grille de recette fonctionnelle & PV de livraison</li>
+                  <li class="flex items-center gap-2">✓ Guide d'administration CMS WordPress</li>
+                </ul>
+              </div>
+
+              <div class="rounded-3xl bg-navy text-white p-7 flex flex-col gap-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">Circuit de Décision</span>
+                <p class="text-xs text-white/80 leading-relaxed">
+                  Pilotage assuré par le Responsable Marketing (Aaron DOSSOU), validation des arbitrages par la Direction Générale et exécution technique par l'agence web dans le respect des délais.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJET SUIVANT -->
+          <div class="pt-8 border-t border-border flex justify-end">
+            <a href="lancement-phygital-perceuse-visseuse.html" class="group flex items-center gap-6 rounded-3xl bg-surface p-6 md:p-8 transition-all hover:bg-navy hover:text-white card-hover max-w-md w-full">
+              <div class="flex flex-col gap-1">
+                <span class="text-xs font-semibold tracking-wider text-brand-orange uppercase">Projet suivant</span>
+                <span class="font-serif text-2xl font-bold text-navy group-hover:text-white transition-colors">Lancement phygital perceuse-visseuse</span>
+                <span class="text-xs text-navy/60 group-hover:text-white/70">Lancement produit · Étude de cas 02</span>
+              </div>
+              <div class="size-11 rounded-full bg-white flex items-center justify-center text-navy shadow-sm group-hover:bg-brand-orange group-hover:text-navy transition-colors shrink-0 ml-auto">
+                <svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-navy text-white border-t border-white/10 py-12">
+    <div class="mx-auto max-w-7xl px-5 md:px-8 text-center text-xs text-white/50">
+      © 2026 Aaron Bignon Romuald DOSSOU. Tous droits réservés. · Consultant indépendant en marketing 360° — Bénin.
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

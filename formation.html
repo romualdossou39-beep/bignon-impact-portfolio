@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formations & Certifications | Aaron Bignon Romuald DOSSOU</title>
+  <meta name="description" content="Formations, certifications et parcours académique d'Aaron Bignon Romuald DOSSOU : Marketing 360°, Analyse de données et Marketing numérique.">
+  <link rel="icon" href="images/portrait.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0c1a34',
+            'navy-soft': '#1d2d4c',
+            'brand-orange': '#ef6c22',
+            surface: '#f3f4f7',
+            border: 'rgba(12, 26, 52, 0.1)',
+          },
+          fontFamily: {
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="flex min-h-screen flex-col bg-background text-foreground antialiased font-sans">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 transition-all duration-300 border-b border-border/60 bg-white/90 backdrop-blur-md">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 md:px-8">
+      <a href="index.html" class="group rounded-md flex items-center gap-3.5" aria-label="Aaron Bignon DOSSOU, accueil">
+        <span class="relative flex size-11 items-center justify-center rounded-full font-serif text-lg bg-navy text-white shadow-sm transition-transform group-hover:scale-105">
+          AD
+          <span class="absolute top-0.5 right-0.5 size-2.5 rounded-full bg-brand-orange ring-2 ring-white"></span>
+        </span>
+        <span class="flex flex-col leading-tight">
+          <span class="text-sm font-bold text-navy tracking-tight group-hover:text-brand-orange transition-colors">Aaron Bignon DOSSOU</span>
+          <span class="text-xs text-muted-foreground font-medium">Marketing 360° · Chef de projet</span>
+        </span>
+      </a>
+
+      <nav class="hidden xl:flex items-center gap-1 text-sm">
+        <a href="index.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Accueil</a>
+        <a href="a-propos.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">À propos</a>
+        <a href="expertises.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Expertises</a>
+        <a href="etude-de-cas.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Étude de cas</a>
+        <a href="realisations.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Réalisations</a>
+        <a href="methodologie.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Méthodologie</a>
+        <a href="formation.html" class="relative rounded-md px-3.5 py-2 font-semibold text-navy transition-colors hover:text-brand-orange after:absolute after:bottom-0 after:left-3.5 after:right-3.5 after:h-0.5 after:bg-brand-orange">Formations</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden sm:inline-flex items-center justify-center rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-orange hover:shadow-md">
+          Me contacter
+        </a>
+        <button id="menu-btn" type="button" class="xl:hidden inline-flex items-center justify-center rounded-lg p-2 text-navy hover:bg-surface focus:outline-none" aria-label="Ouvrir le menu">
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 xl:hidden">
+    <div id="mobile-backdrop" class="fixed inset-0 bg-navy/60 backdrop-blur-sm transition-opacity"></div>
+    <div class="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-white p-6 shadow-2xl flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-border">
+          <div class="flex items-center gap-3">
+            <span class="relative flex size-10 items-center justify-center rounded-full font-serif text-lg bg-navy text-white">
+              AD
+              <span class="absolute top-0.5 right-0.5 size-2 rounded-full bg-brand-orange"></span>
+            </span>
+            <span class="text-sm font-bold text-navy">Aaron Bignon DOSSOU</span>
+          </div>
+          <button id="close-menu-btn" class="p-2 text-navy/70 hover:text-navy rounded-lg hover:bg-surface" aria-label="Fermer le menu">
+            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+        </div>
+        
+        <nav class="flex flex-col gap-2 mt-6">
+          <a href="index.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">Accueil</a>
+          <a href="a-propos.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">À propos</a>
+          <a href="expertises.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">Expertises</a>
+          <a href="etude-de-cas.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">Étude de cas (E-Clean)</a>
+          <a href="realisations.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">Réalisations</a>
+          <a href="methodologie.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">Méthodologie</a>
+          <a href="formation.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-semibold text-brand-orange bg-surface">Formations</a>
+          <a href="contact.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">Contact</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-border flex flex-col gap-3">
+        <a href="contact.html" class="w-full inline-flex items-center justify-center rounded-full bg-navy py-3 text-sm font-semibold text-white shadow-sm hover:bg-brand-orange transition-colors">
+          Me contacter
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO HEADER -->
+    <section class="relative overflow-hidden bg-navy text-white">
+      <div class="decorative-ring-1"></div>
+      <div class="decorative-ring-2"></div>
+
+      <div class="mx-auto w-full max-w-7xl px-5 md:px-8 relative flex flex-col gap-6 py-20 md:py-28">
+        <p class="flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-brand-orange uppercase">
+          <span class="h-px w-8 bg-brand-orange" aria-hidden="true"></span>
+          Qualification & Apprentissage
+        </p>
+        <h1 class="max-w-4xl font-serif text-5xl leading-[1.02] text-balance md:text-7xl">
+          Une expertise bâtie sur la rigueur et l'apprentissage continu.
+        </h1>
+        <p class="max-w-2xl text-lg leading-relaxed text-pretty text-white/70">
+          Un socle universitaire solide complété par des spécialisations de pointe en gestion de projet marketing 360°, en analyse de données et en marketing numérique.
+        </p>
+      </div>
+    </section>
+
+    <!-- FORMATION PHARE : GESTION DE PROJET MARKETING 360° -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="mx-auto w-full max-w-7xl px-5 md:px-8 grid gap-12 lg:grid-cols-12 items-start">
+        
+        <div class="lg:col-span-7 flex flex-col gap-6">
+          <div class="flex flex-col gap-3">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-orange">Formation de Spécialisation</span>
+            <h2 class="font-serif text-3xl font-bold text-navy sm:text-4xl">
+              Gestion de Projet Marketing 360°
+            </h2>
+            <p class="text-sm text-navy/75 leading-relaxed">
+              Programme spécialisé intensif dédié à la conception et à la conduite stratégique et opérationnelle de campagnes marketing intégrées. Cette formation a permis de valider la maîtrise de l'ensemble de la chaîne de valeur : du diagnostic de marque à l'évaluation chiffrée de la rentabilité.
+            </p>
+          </div>
+
+          <dl class="grid gap-4 border-y border-border py-4 sm:grid-cols-2 text-xs">
+            <div>
+              <dt class="font-bold text-navy/50 uppercase">Domaine de compétence</dt>
+              <dd class="font-semibold text-navy mt-1">Marketing 360° & Conduite de Projet</dd>
+            </div>
+            <div>
+              <dt class="font-bold text-navy/50 uppercase">Projet d'application validé</dt>
+              <dd class="font-semibold text-navy mt-1">Cas fil rouge E-Clean Services</dd>
+            </div>
+          </dl>
+
+          <div class="flex flex-col gap-3">
+            <h3 class="font-serif text-2xl font-bold text-navy">Compétences clés validées</h3>
+            <ul class="grid gap-3 sm:grid-cols-2 text-xs text-navy/80">
+              <li class="flex items-start gap-2.5 p-3 rounded-xl bg-surface border border-border">
+                <span class="font-bold text-brand-orange">01</span>
+                <span><strong>Diagnostic & Audit :</strong> Analyse de marché, matrice SWOT et évaluation D/A/C.</span>
+              </li>
+              <li class="flex items-start gap-2.5 p-3 rounded-xl bg-surface border border-border">
+                <span class="font-bold text-brand-orange">02</span>
+                <span><strong>Stratégie de marque :</strong> Proposition de valeur, positionnement et offre commerciale.</span>
+              </li>
+              <li class="flex items-start gap-2.5 p-3 rounded-xl bg-surface border border-border">
+                <span class="font-bold text-brand-orange">03</span>
+                <span><strong>Planification QQOQCCP :</strong> Rétroplanning sous Excel, dépendances et budgets.</span>
+              </li>
+              <li class="flex items-start gap-2.5 p-3 rounded-xl bg-surface border border-border">
+                <span class="font-bold text-brand-orange">04</span>
+                <span><strong>Dispositif Phygital :</strong> Passerelles physiques/digitales, QR codes et landing pages.</span>
+              </li>
+              <li class="flex items-start gap-2.5 p-3 rounded-xl bg-surface border border-border sm:col-span-2">
+                <span class="font-bold text-brand-orange">05</span>
+                <span><strong>Pilotage par la Donnée :</strong> Modélisation de dashboards Excel, CAC, calcul du ROI et synthèse managériale.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Side: Certificate Card -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          <div class="rounded-3xl bg-surface p-8 border border-border flex flex-col gap-4">
+            <div class="flex items-center justify-between pb-4 border-b border-border">
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">Attestation de Spécialisation</span>
+              <span class="text-xs rounded-full bg-emerald-100 text-emerald-800 font-bold px-3 py-1">Validé</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h4 class="font-serif text-2xl font-bold text-navy">Projet Fil Rouge E-Clean Services</h4>
+              <p class="text-xs text-navy/70 leading-relaxed">
+                Dossier complet de cadrage stratégique, brief de production, cartographie phygitale et tableau de bord de simulation commerciale mené avec succès par <strong>Aaron Bignon Romuald DOSSOU</strong>.
+              </p>
+            </div>
+            <div class="pt-2">
+              <a href="etude-de-cas.html" class="inline-flex items-center gap-2 text-xs font-bold text-brand-orange hover:text-navy transition-colors">
+                <span>Consulter l'étude de cas issue de cette formation</span>
+                <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ATTESTATIONS OFFICIELLES & CERTIFICATIONS RECONNUES -->
+    <section class="py-20 md:py-28 bg-surface border-t border-border">
+      <div class="mx-auto w-full max-w-7xl px-5 md:px-8 flex flex-col gap-14">
+        
+        <div class="flex flex-col gap-4 max-w-3xl">
+          <p class="flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-brand-orange uppercase">
+            <span class="h-px w-8 bg-brand-orange" aria-hidden="true"></span>
+            Accréditations Vérifiées
+          </p>
+          <h2 class="font-serif text-4xl leading-[1.08] text-navy sm:text-5xl">
+            Attestations officielles & Certificats d'excellence
+          </h2>
+          <p class="text-navy/70 text-base leading-relaxed">
+            Des certifications professionnelles délivrées par des institutions internationales de premier plan, attestant d'une rigueur d'exécution en marketing digital, en gouvernance de projet et en suivi-évaluation axé sur les résultats.
+          </p>
+        </div>
+
+        <!-- Grille des 3 Attestations Phares -->
+        <div class="grid gap-8 lg:grid-cols-3">
+          
+          <!-- Attestation 1: OIF / D-CLIC -->
+          <div class="rounded-3xl bg-white border border-border shadow-md overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:border-brand-orange/40">
+            <div class="p-7 md:p-8 flex flex-col gap-5">
+              
+              <div class="flex items-center justify-between gap-3 border-b border-border/80 pb-4">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-brand-orange/10 px-3 py-1 text-xs font-bold text-brand-orange">
+                  <span class="size-1.5 rounded-full bg-brand-orange"></span>
+                  OIF · D-CLIC
+                </span>
+                <span class="text-xs font-mono text-navy/50 bg-surface px-2.5 py-1 rounded-md">udY5tb9xGU</span>
+              </div>
+
+              <div>
+                <span class="text-xs font-semibold text-navy/50 uppercase tracking-wider">Formation Professionnalisante</span>
+                <h3 class="font-serif text-2xl font-bold text-navy mt-1">Marketing Numérique</h3>
+                <p class="text-xs text-brand-orange font-medium mt-1">Organisation internationale de la Francophonie</p>
+              </div>
+
+              <div class="rounded-2xl bg-surface p-4 text-xs text-navy/80 space-y-2 border border-border/50">
+                <div class="flex justify-between">
+                  <span class="text-navy/60">Programme :</span>
+                  <strong class="text-navy">Projet D-CLIC</strong>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-navy/60">Volume horaire :</span>
+                  <span class="font-semibold text-navy">60h tutorée à distance</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-navy/60">Période :</span>
+                  <span class="font-semibold text-navy">Juillet à août 2025</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-navy/60">Délivrée le :</span>
+                  <span class="font-semibold text-navy">16 septembre 2025 (Paris)</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-navy mb-2.5">Compétences attestées :</h4>
+                <ul class="text-xs space-y-2 text-navy/75">
+                  <li class="flex items-start gap-2">
+                    <svg class="size-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Concevoir une campagne marketing globale</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="size-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Gérer le budget et le planning de campagne</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="size-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Production de contenus de marketing numérique</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="size-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Préparation du plan d'action et analyse des KPIs</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="p-6 bg-surface/60 border-t border-border flex flex-col gap-2.5">
+              <a href="attestations/Attestation_Marketing_Numerique_OIF.pdf" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-navy py-2.5 px-4 text-xs font-bold text-white shadow-sm hover:bg-brand-orange transition-colors">
+                <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                <span>Consulter l'attestation originale (PDF)</span>
+              </a>
+              <a href="attestations/Attestation_Marketing_Numerique_OIF.pdf" download="Attestation_Marketing_Numerique_OIF_Aaron_DOSSOU.pdf" class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-white border border-border py-2 px-4 text-xs font-semibold text-navy hover:bg-surface transition-colors">
+                <svg class="size-4 text-navy/60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                <span>Télécharger le document</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Attestation 2: DisasterReady / Cornerstone -->
+          <div class="rounded-3xl bg-white border border-border shadow-md overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:border-brand-orange/40">
+            <div class="p-7 md:p-8 flex flex-col gap-5">
+              
+              <div class="flex items-center justify-between gap-3 border-b border-border/80 pb-4">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-800">
+                  <span class="size-1.5 rounded-full bg-blue-600"></span>
+                  DisasterReady.org
+                </span>
+                <span class="text-xs font-mono text-navy/50 bg-surface px-2.5 py-1 rounded-md">Cornerstone Fdn</span>
+              </div>
+
+              <div>
+                <span class="text-xs font-semibold text-navy/50 uppercase tracking-wider">Certificat d'Accomplissement</span>
+                <h3 class="font-serif text-2xl font-bold text-navy mt-1">Fondamentaux de la gestion de projet</h3>
+                <p class="text-xs text-blue-700 font-medium mt-1">Cornerstone OnDemand Foundation</p>
+              </div>
+
+              <div class="rounded-2xl bg-surface p-4 text-xs text-navy/80 space-y-2 border border-border/50">
+                <div class="flex justify-between">
+                  <span class="text-navy/60">Organisme :</span>
+                  <strong class="text-navy">DisasterReady Initiative</strong>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-navy/60">Direction :</span>
+                  <span class="font-semibold text-navy">Tina Bolding, Directrice</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-navy/60">Date :</span>
+                  <span class="font-semibold text-navy">Jeudi 16 novembre 2023</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-navy/60">Statut :</span>
+                  <span class="font-semibold text-emerald-700">Validé avec succès</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-navy mb-2.5">Compétences attestées :</h4>
+                <ul class="text-xs space-y-2 text-navy/75">
+                  <li class="flex items-start gap-2">
+                    <svg class="size-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Cadrage et structuration des étapes clés de projet</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="size-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Gestion des risques, délais et dépendances</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="size-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Gouvernance, rôles et circuit de décision</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="size-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Suivi des livrables et critères d'acceptation</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="p-6 bg-surface/60 border-t border-border flex flex-col gap-2.5">
+              <a href="attestations/Certificat_Fondamentaux_Gestion_Projet.pdf" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-navy py-2.5 px-4 text-xs font-bold text-white shadow-sm hover:bg-brand-orange transition-colors">
+                <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                <span>Consulter le certificat original (PDF)</span>
+              </a>
+              <a href="attestations/Certificat_Fondamentaux_Gestion_Projet.pdf" download="Certificat_Gestion_Projet_Aaron_DOSSOU.pdf" class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-white border border-border py-2 px-4 text-xs font-semibold text-navy hover:bg-surface transition-colors">
+                <svg class="size-4 text-navy/60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                <span>Télécharger le document</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Attestation 3: Campus AFD -->
+          <div class="rounded-3xl bg-white border border-border shadow-md overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:border-brand-orange/40">
+            <div class="p-7 md:p-8 flex flex-col gap-5">
+              
+              <div class="flex items-center justify-between gap-3 border-b border-border/80 pb-4">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-red-50 px-3 py-1 text-xs font-bold text-red-700">
+                  <span class="size-1.5 rounded-full bg-red-600"></span>
+                  Campus AFD
+                </span>
+                <span class="text-xs font-mono text-navy/50 bg-surface px-2.5 py-1 rounded-md">Marseille</span>
+              </div>
+
+              <div>
+                <span class="text-xs font-semibold text-navy/50 uppercase tracking-wider">Certificat de Réussite</span>
+                <h3 class="font-serif text-2xl font-bold text-navy mt-1">Suivi et Évaluation de projet</h3>
+                <p class="text-xs text-red-600 font-medium mt-1">Agence Française de Développement (AFD)</p>
+              </div>
+
+              <div class="rounded-2xl bg-surface p-4 text-xs text-navy/80 space-y-2 border border-border/50">
+                <div class="flex justify-between">
+                  <span class="text-navy/60">Institution :</span>
+                  <strong class="text-navy">Campus AFD</strong>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-navy/60">Direction :</span>
+                  <span class="font-semibold text-navy">Sarah Marniesse, Directrice</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-navy/60">Délivré le :</span>
+                  <span class="font-semibold text-navy">1er février 2025</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-navy/60">Spécialité :</span>
+                  <span class="font-semibold text-navy">Projets de développement</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-navy mb-2.5">Compétences attestées :</h4>
+                <ul class="text-xs space-y-2 text-navy/75">
+                  <li class="flex items-start gap-2">
+                    <svg class="size-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Modélisation de cadres logiques d'intervention</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="size-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Conception et suivi d'indicateurs de performance</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="size-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Collecte, traitement et vérification des données terrain</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="size-4 text-emerald-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    <span>Évaluation d'impact et arbitrage décisionnel</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="p-6 bg-surface/60 border-t border-border flex flex-col gap-2.5">
+              <a href="attestations/Certificat_Suivi_Evaluation_Projets_AFD.pdf" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-navy py-2.5 px-4 text-xs font-bold text-white shadow-sm hover:bg-brand-orange transition-colors">
+                <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                <span>Consulter le certificat original (PDF)</span>
+              </a>
+              <a href="attestations/Certificat_Suivi_Evaluation_Projets_AFD.pdf" download="Certificat_Suivi_Evaluation_AFD_Aaron_DOSSOU.pdf" class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-white border border-border py-2 px-4 text-xs font-semibold text-navy hover:bg-surface transition-colors">
+                <svg class="size-4 text-navy/60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                <span>Télécharger le document</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AUTRES FORMATIONS, DATA ANALYTICS & CURSUS ACADÉMIQUE -->
+    <section class="py-20 md:py-28 bg-white border-t border-border">
+      <div class="mx-auto w-full max-w-7xl px-5 md:px-8 flex flex-col gap-12">
+        
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <p class="flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-brand-orange uppercase">
+            <span class="h-px w-8 bg-brand-orange" aria-hidden="true"></span>
+            Socle Analytique & Universitaire
+          </p>
+          <h2 class="font-serif text-4xl leading-[1.08] text-navy sm:text-5xl">
+            Analyse de données & Cursus académique
+          </h2>
+          <p class="text-navy/70 text-base leading-relaxed">
+            Un solide bagage méthodologique combinant rigueur d'analyse de données d'affaires, esprit critique universitaire et pédagogie de transmission.
+          </p>
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          
+          <!-- Certif 1: Data Analytics Foundations -->
+          <div class="rounded-3xl bg-surface p-7 border border-border shadow-sm flex flex-col justify-between card-hover">
+            <div class="flex flex-col gap-3">
+              <span class="text-xs font-bold text-brand-orange uppercase">LinkedIn Learning</span>
+              <h3 class="font-serif text-2xl font-bold text-navy">Préparer votre carrière dans l'analyse de données</h3>
+              <p class="text-xs leading-relaxed text-navy/70">
+                Fondations méthodologiques de la science des données : collecte, structuration, nettoyage et valorisation décisionnelle.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-border text-xs text-navy/50 font-medium">
+              Data Analytics · Rigueur d'analyse
+            </div>
+          </div>
+
+          <!-- Certif 2: Data Analytics 1 -->
+          <div class="rounded-3xl bg-surface p-7 border border-border shadow-sm flex flex-col justify-between card-hover">
+            <div class="flex flex-col gap-3">
+              <span class="text-xs font-bold text-brand-orange uppercase">LinkedIn Learning</span>
+              <h3 class="font-serif text-2xl font-bold text-navy">Apprendre l'analyse des données : Fondements</h3>
+              <p class="text-xs leading-relaxed text-navy/70">
+                Principes fondamentaux du traitement des métriques d’affaires, modélisation de tableaux de bord et formulation d'indicateurs de performance.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-border text-xs text-navy/50 font-medium">
+              KPIs & Tableaux de bord Excel
+            </div>
+          </div>
+
+          <!-- Certif 3: Data Analytics 2 -->
+          <div class="rounded-3xl bg-surface p-7 border border-border shadow-sm flex flex-col justify-between card-hover">
+            <div class="flex flex-col gap-3">
+              <span class="text-xs font-bold text-brand-orange uppercase">LinkedIn Learning</span>
+              <h3 class="font-serif text-2xl font-bold text-navy">Apprendre l'analyse des données : Partie 2</h3>
+              <p class="text-xs leading-relaxed text-navy/70">
+                Extension et application pratique des connaissances d'analyse : interprétation statistique, corrélation et aide à la décision managériale.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-border text-xs text-navy/50 font-medium">
+              Analytics avancé & Modélisation ROI
+            </div>
+          </div>
+
+          <!-- Certif 4 : Licence UAC -->
+          <div class="rounded-3xl bg-surface p-7 border border-border shadow-sm flex flex-col justify-between card-hover">
+            <div class="flex flex-col gap-3">
+              <span class="text-xs font-bold text-brand-orange uppercase">Université d'Abomey-Calavi (Bénin)</span>
+              <h3 class="font-serif text-2xl font-bold text-navy">Licence en Étude espagnole</h3>
+              <p class="text-xs leading-relaxed text-navy/70">
+                Formation universitaire (2013-2017) axée sur la linguistique, la rigueur de rédaction, l'analyse critique textuelle et la communication interculturelle.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-border text-xs text-navy/50 font-medium">
+              Diplôme Universitaire · 2013 – 2017
+            </div>
+          </div>
+
+          <!-- Certif 5 : Graphisme PAO -->
+          <div class="rounded-3xl bg-surface p-7 border border-border shadow-sm flex flex-col justify-between card-hover">
+            <div class="flex flex-col gap-3">
+              <span class="text-xs font-bold text-brand-orange uppercase">Compétences d'exécution</span>
+              <h3 class="font-serif text-2xl font-bold text-navy">Graphisme (Adobe Photoshop)</h3>
+              <p class="text-xs leading-relaxed text-navy/70">
+                Formateur au graphisme publicitaire au Groupe Promotion de l'Excellence : déclinaison de chartes graphiques, détourage, mise en page et visuels de campagne.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-border text-xs text-navy/50 font-medium">
+              PAO · Identité Visuelle · Création
+            </div>
+          </div>
+
+          <!-- Certif 6 : Rédaction SEO & Copywriting -->
+          <div class="rounded-3xl bg-surface p-7 border border-border shadow-sm flex flex-col justify-between card-hover">
+            <div class="flex flex-col gap-3">
+              <span class="text-xs font-bold text-brand-orange uppercase">Coaching Éditorial</span>
+              <h3 class="font-serif text-2xl font-bold text-navy">Rédaction Web SEO & Copywriting</h3>
+              <p class="text-xs leading-relaxed text-navy/70">
+                Formateur et coach de rédacteurs web : structuration sémantique, écriture persuasive orientée conversion, content marketing et storytelling de marque.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-border text-xs text-navy/50 font-medium">
+              Copywriting · Stratégie de Contenu SEO
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BANNIÈRE CTA -->
+    <section class="bg-navy py-16 text-white border-t border-white/10">
+      <div class="mx-auto w-full max-w-7xl px-5 md:px-8 text-center flex flex-col items-center gap-6">
+        <h2 class="font-serif text-3xl sm:text-4xl max-w-2xl">
+          Bénéficiez de cette double expertise stratégique et analytique
+        </h2>
+        <p class="text-white/70 max-w-xl text-base">
+          Mettons ces compétences au service de vos projets de croissance et de vos campagnes marketing.
+        </p>
+        <a href="contact.html" class="rounded-full bg-brand-orange px-8 py-3.5 text-sm font-bold text-navy hover:bg-white transition-all">
+          Prendre contact
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy text-white border-t border-white/10">
+    <div class="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-2 md:px-8 lg:grid-cols-4">
+      
+      <div class="flex flex-col gap-5 lg:col-span-1">
+        <span class="flex items-center gap-3">
+          <span class="relative flex size-10 items-center justify-center rounded-full font-serif text-lg bg-white text-navy font-bold">
+            AD
+            <span class="absolute top-0.5 right-0.5 size-2 rounded-full bg-brand-orange"></span>
+          </span>
+          <span class="flex flex-col leading-tight">
+            <span class="text-sm font-bold text-white">Aaron Bignon DOSSOU</span>
+            <span class="text-xs text-white/60">Marketing 360°</span>
+          </span>
+        </span>
+        <p class="text-sm leading-relaxed text-white/65">
+          Stratégie, coordination et performance au service de vos projets.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="mb-4 text-xs font-semibold tracking-[0.2em] text-brand-orange uppercase">Navigation</h3>
+        <ul class="flex flex-col gap-2.5 text-sm text-white/75">
+          <li><a class="hover:text-white transition-colors" href="index.html">Accueil</a></li>
+          <li><a class="hover:text-white transition-colors" href="a-propos.html">À propos</a></li>
+          <li><a class="hover:text-white transition-colors" href="expertises.html">Expertises</a></li>
+          <li><a class="hover:text-white transition-colors" href="etude-de-cas.html">Étude de cas (E-Clean)</a></li>
+          <li><a class="hover:text-white transition-colors" href="realisations.html">Réalisations</a></li>
+          <li><a class="hover:text-white transition-colors" href="methodologie.html">Méthodologie</a></li>
+          <li><a class="hover:text-white transition-colors" href="formation.html">Formations</a></li>
+          <li><a class="hover:text-white transition-colors" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="mb-4 text-xs font-semibold tracking-[0.2em] text-brand-orange uppercase">Expertises</h3>
+        <ul class="flex flex-col gap-2.5 text-sm text-white/75">
+          <li><a class="hover:text-white transition-colors" href="expertises.html#strategie-marketing">Stratégie marketing</a></li>
+          <li><a class="hover:text-white transition-colors" href="expertises.html#gestion-de-projet">Gestion de projet</a></li>
+          <li><a class="hover:text-white transition-colors" href="expertises.html#communication-360">Communication 360°</a></li>
+          <li><a class="hover:text-white transition-colors" href="expertises.html#marketing-digital">Marketing digital</a></li>
+          <li><a class="hover:text-white transition-colors" href="expertises.html#acquisition-conversion">Acquisition et conversion</a></li>
+          <li><a class="hover:text-white transition-colors" href="expertises.html#analyse-performance">Analyse et pilotage</a></li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-3">
+        <h3 class="mb-1 text-xs font-semibold tracking-[0.2em] text-brand-orange uppercase">Contact direct</h3>
+        <ul class="flex flex-col gap-2.5 text-sm text-white/75">
+          <li class="flex items-center gap-2">
+            <svg class="size-4 text-brand-orange shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>Grand-Popo & Cotonou, Bénin</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="size-4 text-brand-orange shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <a href="mailto:dossouromuald39@gmail.com" class="hover:text-white transition-colors">dossouromuald39@gmail.com</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="size-4 text-brand-orange shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <a href="tel:+22967232780" class="hover:text-white transition-colors">+229 67 23 27 80</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="size-4 text-brand-orange shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <a href="https://www.linkedin.com/in/romuald01" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">linkedin.com/in/romuald01</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/10 py-6 text-center text-xs text-white/50 px-5">
+      © 2026 Aaron Bignon Romuald DOSSOU. Tous droits réservés. · Consultant indépendant en marketing 360° — Bénin.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

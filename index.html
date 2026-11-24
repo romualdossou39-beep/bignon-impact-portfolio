@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aaron Bignon Romuald DOSSOU | Consultant en marketing 360° au Bénin</title>
+  <meta name="description" content="Portfolio d'Aaron Bignon Romuald DOSSOU, Consultant en marketing 360° et chef de projet digital au Bénin. Stratégie, coordination et performance.">
+  <link rel="icon" href="images/portrait.jpg" type="image/jpeg">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0c1a34',
+            'navy-soft': '#1d2d4c',
+            'brand-orange': '#ef6c22',
+            surface: '#f3f4f7',
+            border: 'rgba(12, 26, 52, 0.1)',
+          },
+          fontFamily: {
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="flex min-h-screen flex-col bg-background text-foreground antialiased font-sans">
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-50 transition-all duration-300 border-b border-border/60 bg-white/90 backdrop-blur-md">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 md:px-8">
+      
+      <!-- Brand Logo / Avatar -->
+      <a href="index.html" class="group rounded-md flex items-center gap-3.5" aria-label="Aaron Bignon DOSSOU, accueil">
+        <span class="relative flex size-11 items-center justify-center rounded-full font-serif text-lg bg-navy text-white shadow-sm transition-transform group-hover:scale-105">
+          AD
+          <span class="absolute top-0.5 right-0.5 size-2.5 rounded-full bg-brand-orange ring-2 ring-white"></span>
+        </span>
+        <span class="flex flex-col leading-tight">
+          <span class="text-sm font-bold text-navy tracking-tight group-hover:text-brand-orange transition-colors">Aaron Bignon DOSSOU</span>
+          <span class="text-xs text-muted-foreground font-medium">Marketing 360° · Chef de projet</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden xl:flex items-center gap-1 text-sm">
+        <a href="index.html" class="relative rounded-md px-3.5 py-2 font-semibold text-navy transition-colors hover:text-brand-orange after:absolute after:bottom-0 after:left-3.5 after:right-3.5 after:h-0.5 after:bg-brand-orange">Accueil</a>
+        <a href="a-propos.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">À propos</a>
+        <a href="expertises.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Expertises</a>
+        <a href="etude-de-cas.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Étude de cas</a>
+        <a href="realisations.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Réalisations</a>
+        <a href="methodologie.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Méthodologie</a>
+        <a href="formation.html" class="relative rounded-md px-3.5 py-2 font-medium text-navy/70 transition-colors hover:text-navy">Formations</a>
+      </nav>
+
+      <!-- CTA & Mobile Button -->
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden sm:inline-flex items-center justify-center rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-orange hover:shadow-md">
+          Me contacter
+        </a>
+        <button id="menu-btn" type="button" class="xl:hidden inline-flex items-center justify-center rounded-lg p-2 text-navy hover:bg-surface focus:outline-none" aria-label="Ouvrir le menu">
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 xl:hidden">
+    <div id="mobile-backdrop" class="fixed inset-0 bg-navy/60 backdrop-blur-sm transition-opacity"></div>
+    <div class="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-white p-6 shadow-2xl flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-border">
+          <div class="flex items-center gap-3">
+            <span class="relative flex size-10 items-center justify-center rounded-full font-serif text-lg bg-navy text-white">
+              AD
+              <span class="absolute top-0.5 right-0.5 size-2 rounded-full bg-brand-orange"></span>
+            </span>
+            <span class="text-sm font-bold text-navy">Aaron Bignon DOSSOU</span>
+          </div>
+          <button id="close-menu-btn" class="p-2 text-navy/70 hover:text-navy rounded-lg hover:bg-surface" aria-label="Fermer le menu">
+            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        
+        <nav class="flex flex-col gap-2 mt-6">
+          <a href="index.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-semibold text-brand-orange bg-surface">
+            <span>Accueil</span>
+            <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="a-propos.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">
+            <span>À propos</span>
+            <svg class="size-4 text-navy/40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="expertises.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">
+            <span>Expertises</span>
+            <svg class="size-4 text-navy/40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="etude-de-cas.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">
+            <span>Étude de cas phare (E-Clean)</span>
+            <svg class="size-4 text-navy/40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="realisations.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">
+            <span>Réalisations</span>
+            <svg class="size-4 text-navy/40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="methodologie.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">
+            <span>Méthodologie</span>
+            <svg class="size-4 text-navy/40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="formation.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">
+            <span>Formations</span>
+            <svg class="size-4 text-navy/40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="contact.html" class="flex items-center justify-between px-3 py-3 rounded-lg text-base font-medium text-navy hover:bg-surface">
+            <span>Contact</span>
+            <svg class="size-4 text-navy/40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-border flex flex-col gap-3">
+        <a href="contact.html" class="w-full inline-flex items-center justify-center rounded-full bg-navy py-3 text-sm font-semibold text-white shadow-sm hover:bg-brand-orange transition-colors">
+          Me contacter
+        </a>
+        <div class="text-xs text-center text-navy/60">
+          dossouromuald39@gmail.com · +229 67 23 27 80
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28">
+      <div class="mx-auto w-full max-w-7xl px-5 md:px-8">
+        <div class="grid items-center gap-12 lg:grid-cols-12">
+          
+          <!-- Text Content -->
+          <div class="flex flex-col gap-6 lg:col-span-7">
+            <!-- Location Badge -->
+            <div class="inline-flex items-center gap-2.5 self-start rounded-full border border-border bg-surface px-4 py-1.5 text-xs font-semibold text-navy">
+              <span class="size-2 rounded-full bg-emerald-500 animate-ping-slow"></span>
+              <span>Cotonou & Grand-Popo, Bénin · Consultant indépendant</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="font-serif text-5xl leading-[1.05] tracking-tight text-navy sm:text-6xl md:text-7xl">
+              Consultant en <br class="hidden sm:inline">
+              <span class="italic text-brand-orange">marketing 360°</span>
+            </h1>
+
+            <!-- Pitch Description -->
+            <p class="max-w-2xl text-lg leading-relaxed text-navy/75 md:text-xl">
+              Je transforme vos enjeux d'affaires en <strong class="text-navy font-semibold">stratégies marketing cohérentes</strong> et en <strong class="text-navy font-semibold">projets performants</strong>. Du diagnostic initial au pilotage chiffré du ROI, j’accompagne entreprises, PME, organisations et entrepreneurs avec une approche rigoureuse et un regard global sur l'ensemble de vos canaux physiques et digitaux.
+            </p>
+
+            <!-- Actions CTA -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="expertises.html" class="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-orange hover:shadow-lg">
+                <span>Découvrir mes expertises</span>
+                <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+              <a href="etude-de-cas.html" class="inline-flex items-center gap-2 rounded-full border border-navy/20 bg-white px-6 py-3.5 text-sm font-semibold text-navy transition-all hover:border-brand-orange hover:text-brand-orange hover:bg-surface">
+                <span>Étude de cas E-Clean</span>
+                <span class="rounded-full bg-brand-orange/15 px-2 py-0.5 text-xs text-brand-orange font-bold">Phare</span>
+              </a>
+            </div>
+
+            <!-- Identity Badges -->
+            <div class="flex items-center gap-6 pt-4 border-t border-border/80">
+              <div class="flex flex-col">
+                <span class="text-xs font-semibold tracking-wider text-muted-foreground uppercase">Consultant</span>
+                <span class="text-sm font-bold text-navy">Aaron Bignon Romuald DOSSOU</span>
+              </div>
+              <div class="h-8 w-px bg-border"></div>
+              <div class="flex flex-col">
+                <span class="text-xs font-semibold tracking-wider text-muted-foreground uppercase">Disponibilité</span>
+                <span class="text-sm font-semibold text-emerald-600">Missions & Conseils B2B</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Portrait Image Container -->
+          <div class="relative lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-md">
+              <!-- Decorative background card / border -->
+              <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-brand-orange/20 to-navy/10 transform -rotate-2 -z-10"></div>
+              
+              <!-- Image frame -->
+              <div class="relative overflow-hidden rounded-3xl border-4 border-white shadow-2xl bg-surface aspect-[4/5]">
+                <img src="images/portrait.jpg" alt="Aaron Bignon Romuald DOSSOU — Consultant en Marketing 360°" class="h-full w-full object-cover object-top transition-transform duration-500 hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent"></div>
+                
+                <!-- Bottom Caption inside photo -->
+                <div class="absolute bottom-4 left-4 right-4 text-white">
+                  <p class="text-xs uppercase tracking-widest text-brand-orange font-bold">Consultant certifié</p>
+                  <p class="font-serif text-2xl font-medium">Aaron Bignon R. DOSSOU</p>
+                </div>
+              </div>
+
+              <!-- Floating badge top right -->
+              <div class="absolute -top-3 -right-3 rounded-2xl bg-white p-3.5 shadow-xl border border-border flex items-center gap-3">
+                <div class="flex size-10 items-center justify-center rounded-xl bg-brand-orange/15 text-brand-orange">
+                  <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs text-navy/60 font-medium">Marketing 360°</span>
+                  <span class="text-sm font-bold text-navy">Stratégie & ROI</span>
+                </div>
+              </div>
+
+              <!-- Floating badge bottom left -->
+              <div class="absolute -bottom-4 -left-4 rounded-2xl bg-navy text-white p-3.5 shadow-xl flex items-center gap-3">
+                <div class="flex size-9 items-center justify-center rounded-xl bg-white/10 text-brand-orange">
+                  <svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs text-white/70">Analyse de données</span>
+                  <span class="text-sm font-bold text-white">Pilotage par la preuve</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHT PILLARS RIBBON -->
+    <section class="border-y border-border bg-surface py-12 md:py-16">
+      <div class="mx-auto w-full max-w-7xl px-5 md:px-8">
+        <div class="grid gap-8 md:grid-cols-3">
+          
+          <div class="flex flex-col gap-3 rounded-2xl bg-white p-6 shadow-sm border border-border/70 card-hover">
+            <span class="font-serif text-3xl font-bold text-brand-orange">01</span>
+            <h3 class="text-lg font-bold text-navy">Vision 360° & Stratégie</h3>
+            <p class="text-sm leading-relaxed text-navy/70">
+              De l'audit initial au positionnement différenciant, je structure des feuilles de route claires pour harmoniser l'ensemble de vos points de contact.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-3 rounded-2xl bg-white p-6 shadow-sm border border-border/70 card-hover">
+            <span class="font-serif text-3xl font-bold text-brand-orange">02</span>
+            <h3 class="text-lg font-bold text-navy">Gestion de projet rigoureuse</h3>
+            <p class="text-sm leading-relaxed text-navy/70">
+              Méthodologie QQOQCCP, rétroplanning prévisionnel, briefs prestataires et respect des enveloppes budgétaires pour une exécution sans faille.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-3 rounded-2xl bg-white p-6 shadow-sm border border-border/70 card-hover">
+            <span class="font-serif text-3xl font-bold text-brand-orange">03</span>
+            <h3 class="text-lg font-bold text-navy">Culture de la donnée & ROI</h3>
+            <p class="text-sm leading-relaxed text-navy/70">
+              Tableaux de bord de pilotage, suivi de l'entonnoir commercial, calcul du CAC et rentabilité mesurable pour éclairer vos prises de décision.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BANDEAU DES CERTIFICATIONS & ATTESTATIONS OFFICIELLES -->
+    <section class="py-10 border-b border-border bg-gradient-to-r from-navy via-navy-soft to-navy text-white">
+      <div class="mx-auto w-full max-w-7xl px-5 md:px-8">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div class="flex flex-col gap-1 max-w-xl">
+            <div class="flex items-center gap-2">
+              <span class="size-2 rounded-full bg-brand-orange animate-pulse"></span>
+              <span class="text-xs font-bold uppercase tracking-widest text-brand-orange">Accréditations Vérifiées</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-white">Certifié par des institutions internationales</h3>
+            <p class="text-xs text-white/70">Validation officielle des compétences en marketing numérique, conduite de projet et suivi-évaluation.</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full lg:w-auto">
+            <!-- Certif 1: OIF -->
+            <a href="attestations/Attestation_Marketing_Numerique_OIF.pdf" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 rounded-xl bg-white/10 hover:bg-white/20 p-3.5 border border-white/10 transition-all" title="Consulter l'attestation OIF (PDF)">
+              <div class="size-9 rounded-lg bg-brand-orange/20 text-brand-orange flex items-center justify-center font-bold text-xs shrink-0">OIF</div>
+              <div class="flex flex-col">
+                <span class="text-xs font-bold text-white group-hover:text-brand-orange transition-colors">Marketing Numérique</span>
+                <span class="text-[11px] text-white/60">Projet D-CLIC · Paris</span>
+              </div>
+            </a>
+            <!-- Certif 2: DisasterReady -->
+            <a href="attestations/Certificat_Fondamentaux_Gestion_Projet.pdf" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 rounded-xl bg-white/10 hover:bg-white/20 p-3.5 border border-white/10 transition-all" title="Consulter le certificat DisasterReady (PDF)">
+              <div class="size-9 rounded-lg bg-blue-500/20 text-blue-300 flex items-center justify-center font-bold text-xs shrink-0">GP</div>
+              <div class="flex flex-col">
+                <span class="text-xs font-bold text-white group-hover:text-brand-orange transition-colors">Gestion de Projet</span>
+                <span class="text-[11px] text-white/60">Cornerstone Fdn</span>
+              </div>
+            </a>
+            <!-- Certif 3: Campus AFD -->
+            <a href="attestations/Certificat_Suivi_Evaluation_Projets_AFD.pdf" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 rounded-xl bg-white/10 hover:bg-white/20 p-3.5 border border-white/10 transition-all" title="Consulter le certificat Campus AFD (PDF)">
+              <div class="size-9 rounded-lg bg-red-500/20 text-red-300 flex items-center justify-center font-bold text-xs shrink-0">AFD</div>
+              <div class="flex flex-col">
+                <span class="text-xs font-bold text-white group-hover:text-brand-orange transition-colors">Suivi & Évaluation</span>
+                <span class="text-[11px] text-white/60">Campus AFD · Marseille</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICS ACCOMPAGNÉS -->
+    <section class="py-12 border-b border-border bg-white">
+      <div class="mx-auto w-full max-w-7xl px-5 md:px-8">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <p class="text-xs font-semibold tracking-[0.2em] uppercase text-navy/60">
+            Publics accompagnés
+          </p>
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="rounded-full bg-surface px-4 py-2 text-xs font-semibold text-navy border border-border">Entreprises B2B</span>
+            <span class="rounded-full bg-surface px-4 py-2 text-xs font-semibold text-navy border border-border">PME & ETI</span>
+            <span class="rounded-full bg-surface px-4 py-2 text-xs font-semibold text-navy border border-border">Associations & ONG</span>
+            <span class="rounded-full bg-surface px-4 py-2 text-xs font-semibold text-navy border border-border">Institutions publiques</span>
+            <span class="rounded-full bg-surface px-4 py-2 text-xs font-semibold text-navy border border-border">Entrepreneurs & Startups</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISES PREVIEW -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="mx-auto w-full max-w-7xl px-5 md:px-8 flex flex-col gap-12">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div class="flex flex-col gap-4 max-w-2xl">
+            <p class="flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-brand-orange uppercase">
+              <span class="h-px w-8 bg-brand-orange" aria-hidden="true"></span>
+              Domaines d'expertise
+            </p>
+            <h2 class="font-serif text-4xl leading-[1.08] text-navy sm:text-5xl">
+              Six piliers complémentaires pour couvrir l’ensemble de vos besoins.
+            </h2>
+          </div>
+          <a href="expertises.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-orange hover:text-navy transition-colors self-start md:self-auto">
+            <span>Voir toutes les expertises en détail</span>
+            <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          
+          <!-- Card 1 -->
+          <a href="expertises.html#strategie-marketing" class="group flex flex-col justify-between rounded-3xl border border-border p-8 bg-surface transition-all duration-300 hover:border-brand-orange hover:bg-white card-hover">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <span class="font-serif text-2xl font-bold text-brand-orange">01</span>
+                <div class="flex size-10 items-center justify-center rounded-full bg-white text-navy shadow-sm group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                  <svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                </div>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-navy group-hover:text-brand-orange transition-colors">Stratégie marketing</h3>
+              <p class="text-sm leading-relaxed text-navy/70">
+                Audits complets, études de positionnement, segmentation de la cible et élaboration de plateformes de marque différenciantes.
+              </p>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-2 pt-4 border-t border-border/60">
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">Audit stratégique</span>
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">Positionnement</span>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="expertises.html#gestion-de-projet" class="group flex flex-col justify-between rounded-3xl border border-border p-8 bg-surface transition-all duration-300 hover:border-brand-orange hover:bg-white card-hover">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <span class="font-serif text-2xl font-bold text-brand-orange">02</span>
+                <div class="flex size-10 items-center justify-center rounded-full bg-white text-navy shadow-sm group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                  <svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                </div>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-navy group-hover:text-brand-orange transition-colors">Gestion de projet</h3>
+              <p class="text-sm leading-relaxed text-navy/70">
+                Cadrage opérationnel, rétroplanning détaillé, briefs créatifs, gestion budgétaire et coordination agile des intervenants.
+              </p>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-2 pt-4 border-t border-border/60">
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">QQOQCCP</span>
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">Rétroplanning</span>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="expertises.html#communication-360" class="group flex flex-col justify-between rounded-3xl border border-border p-8 bg-surface transition-all duration-300 hover:border-brand-orange hover:bg-white card-hover">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <span class="font-serif text-2xl font-bold text-brand-orange">03</span>
+                <div class="flex size-10 items-center justify-center rounded-full bg-white text-navy shadow-sm group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                  <svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
+                </div>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-navy group-hover:text-brand-orange transition-colors">Communication 360°</h3>
+              <p class="text-sm leading-relaxed text-navy/70">
+                Dispositifs phygitaux unifiés, supports imprimés, vidéo publicitaire, bannières et relations presse pour une portée optimale.
+              </p>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-2 pt-4 border-t border-border/60">
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">Phygital</span>
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">Multicanal</span>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="expertises.html#marketing-digital" class="group flex flex-col justify-between rounded-3xl border border-border p-8 bg-surface transition-all duration-300 hover:border-brand-orange hover:bg-white card-hover">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <span class="font-serif text-2xl font-bold text-brand-orange">04</span>
+                <div class="flex size-10 items-center justify-center rounded-full bg-white text-navy shadow-sm group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                  <svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                </div>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-navy group-hover:text-brand-orange transition-colors">Marketing digital</h3>
+              <p class="text-sm leading-relaxed text-navy/70">
+                Déploiement sur LinkedIn, landing pages à haute conversion, rédaction web orientée conversion et campagnes ciblées.
+              </p>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-2 pt-4 border-t border-border/60">
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">LinkedIn B2B</span>
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">Copywriting</span>
+            </div>
+          </a>
+
+          <!-- Card 5 -->
+          <a href="expertises.html#acquisition-conversion" class="group flex flex-col justify-between rounded-3xl border border-border p-8 bg-surface transition-all duration-300 hover:border-brand-orange hover:bg-white card-hover">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <span class="font-serif text-2xl font-bold text-brand-orange">05</span>
+                <div class="flex size-10 items-center justify-center rounded-full bg-white text-navy shadow-sm group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                  <svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16v-4m0 0V8m0 4h4m-4 0H8"/></svg>
+                </div>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-navy group-hover:text-brand-orange transition-colors">Acquisition & conversion</h3>
+              <p class="text-sm leading-relaxed text-navy/70">
+                Entonnoir de prospection B2B, qualification des leads, diagnostic d'entrée et fidélisation des comptes clients.
+              </p>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-2 pt-4 border-t border-border/60">
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">Lead Gen</span>
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">Entonnoir CRM</span>
+            </div>
+          </a>
+
+          <!-- Card 6 -->
+          <a href="expertises.html#analyse-performance" class="group flex flex-col justify-between rounded-3xl border border-border p-8 bg-surface transition-all duration-300 hover:border-brand-orange hover:bg-white card-hover">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center justify-between">
+                <span class="font-serif text-2xl font-bold text-brand-orange">06</span>
+                <div class="flex size-10 items-center justify-center rounded-full bg-white text-navy shadow-sm group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                  <svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                </div>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-navy group-hover:text-brand-orange transition-colors">Analyse & pilotage de la performance</h3>
+              <p class="text-sm leading-relaxed text-navy/70">
+                Dashboards décisionnels sous Excel, suivi des KPIs clés, maîtrise du CAC, calcul du ROI et arbitrages managériaux.
+              </p>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-2 pt-4 border-t border-border/60">
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">Tableaux de bord</span>
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">ROI & CAC</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ÉTUDE DE CAS PHARE (SPOTLIGHT E-CLEAN SERVICES) -->
+    <section class="py-16 md:py-24 bg-surface">
+      <div class="mx-auto w-full max-w-7xl px-5 md:px-8">
+        
+        <div class="relative overflow-hidden rounded-3xl bg-navy p-8 md:p-14 lg:p-16 text-white shadow-2xl">
+          <!-- Concentric Decorative Rings -->
+          <div class="decorative-ring-1"></div>
+          <div class="decorative-ring-2"></div>
+
+          <div class="relative z-10 grid gap-12 lg:grid-cols-12 items-center">
+            
+            <div class="flex flex-col gap-6 lg:col-span-7">
+              <p class="flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-brand-orange uppercase">
+                <span class="h-px w-8 bg-brand-orange" aria-hidden="true"></span>
+                Étude de cas phare · Projet 360°
+              </p>
+              
+              <h2 class="font-serif text-4xl leading-[1.05] tracking-tight sm:text-5xl md:text-6xl text-white">
+                E-Clean Services : Repositionnement stratégique & Lancement de l'offre Premium
+              </h2>
+
+              <p class="text-base leading-relaxed text-white/80 md:text-lg">
+                Comment sortir une entreprise de nettoyage professionnel de la guerre des prix en convertissant son engagement écologique en preuve de valeur tangible, en expérience client irréprochable et en offre B2B rentable.
+              </p>
+
+              <!-- Metrics Grid -->
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-4 border-y border-white/15 my-2">
+                <div class="flex flex-col">
+                  <span class="font-serif text-3xl md:text-4xl font-bold text-brand-orange">11</span>
+                  <span class="text-xs text-white/70">Nouveaux contrats signés (dont 8 Premium)</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-serif text-3xl md:text-4xl font-bold text-white">&lt; 24 h</span>
+                  <span class="text-xs text-white/70">Délai de réponse (réduit depuis 72 h)</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-serif text-3xl md:text-4xl font-bold text-brand-orange">+67,4 %</span>
+                  <span class="text-xs text-white/70">Dépassement du ROI vs objectif</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-serif text-3xl md:text-4xl font-bold text-white">88 %</span>
+                  <span class="text-xs text-white/70">Satisfaction client & 90% renouvellement</span>
+                </div>
+              </div>
+
+              <!-- Button CTA -->
+              <div class="flex flex-wrap items-center gap-4 pt-2">
+                <a href="etude-de-cas.html" class="inline-flex items-center gap-2 rounded-full bg-brand-orange px-7 py-3.5 text-sm font-bold text-navy shadow-lg transition-all hover:bg-white hover:scale-105">
+                  <span>Explorer l'étude de cas complète</span>
+                  <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+                <span class="text-xs text-white/60">Dispositif complet : Audit · Brief · Phygital · Dashboard Excel</span>
+              </div>
+
+            </div>
+
+            <!-- Visual Showcase -->
+            <div class="lg:col-span-5">
+              <div class="rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur-md">
+                <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                  <span class="text-xs font-semibold uppercase tracking-wider text-brand-orange">Livrables du projet</span>
+                  <span class="text-xs rounded-full bg-white/10 px-2.5 py-1 text-white/80">Cotonou (Bénin)</span>
+                </div>
+                <ul class="flex flex-col gap-3.5 mt-4 text-sm text-white/85">
+                  <li class="flex items-center gap-3">
+                    <svg class="size-4 text-brand-orange shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span>Rapport d'audit chiffré & Démarrer/Arrêter/Continuer</span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <svg class="size-4 text-brand-orange shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span>Plateforme de marque & nouvelle signature</span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <svg class="size-4 text-brand-orange shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span>Brief créatif (Brochure A4, Vidéo 45s, LinkedIn, Carte A5)</span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <svg class="size-4 text-brand-orange shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span>Cartographie phygitale & passerelles QR codes vers CRM</span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <svg class="size-4 text-brand-orange shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span>Plan marketing QQOQCCP & rétroplanning budgété</span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <svg class="size-4 text-brand-orange shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span>Tableau de bord de pilotage Excel & Calcul du ROI</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AUTRES RÉALISATIONS RÉCENTES -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="mx-auto w-full max-w-7xl px-5 md:px-8 flex flex-col gap-12">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div class="flex flex-col gap-4 max-w-2xl">
+            <p class="flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-brand-orange uppercase">
+              <span class="h-px w-8 bg-brand-orange" aria-hidden="true"></span>
+              Portfolio de cas pratiques
+            </p>
+            <h2 class="font-serif text-4xl leading-[1.08] text-navy sm:text-5xl">
+              Autres réalisations & études de cas
+            </h2>
+          </div>
+          <a href="realisations.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-orange hover:text-navy transition-colors">
+            <span>Découvrir l'ensemble des études de cas</span>
+            <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          
+          <!-- Projet 1 : Audit et refonte web -->
+          <a href="realisations/audit-marketing-refonte-site-web.html" class="group flex flex-col justify-between rounded-3xl border border-border p-6 bg-surface transition-all duration-300 hover:border-brand-orange hover:bg-white card-hover">
+            <div class="flex flex-col gap-4">
+              <div class="relative overflow-hidden rounded-2xl bg-navy/5 aspect-[16/9] flex items-center justify-center border border-border">
+                <div class="flex flex-col items-center gap-2 text-navy/50">
+                  <svg class="size-8 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                  <span class="text-xs font-semibold uppercase tracking-wider text-navy/70">Audit UX & Refonte</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="rounded-full bg-brand-orange/15 px-3 py-1 text-xs font-semibold text-brand-orange">Stratégie digitale</span>
+                <span class="text-xs text-navy/50 font-medium">Étude de cas 01</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-navy group-hover:text-brand-orange transition-colors">
+                Audit marketing et refonte d’un site web
+              </h3>
+              <p class="text-sm leading-relaxed text-navy/70">
+                Diagnostic approfondi de la présence digitale d'une organisation, analyse de trafic et refonte ergonomique orientée conversion de prospects.
+              </p>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-2 pt-4 border-t border-border/60">
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">Audit</span>
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">UX / UI</span>
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">Conversion</span>
+            </div>
+          </a>
+
+          <!-- Projet 2 : Lancement phygital -->
+          <a href="realisations/lancement-phygital-perceuse-visseuse.html" class="group flex flex-col justify-between rounded-3xl border border-border p-6 bg-surface transition-all duration-300 hover:border-brand-orange hover:bg-white card-hover">
+            <div class="flex flex-col gap-4">
+              <div class="relative overflow-hidden rounded-2xl bg-navy/5 aspect-[16/9] flex items-center justify-center border border-border">
+                <div class="flex flex-col items-center gap-2 text-navy/50">
+                  <svg class="size-8 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                  <span class="text-xs font-semibold uppercase tracking-wider text-navy/70">Go-to-market</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="rounded-full bg-brand-orange/15 px-3 py-1 text-xs font-semibold text-brand-orange">Lancement produit</span>
+                <span class="text-xs text-navy/50 font-medium">Étude de cas 02</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-navy group-hover:text-brand-orange transition-colors">
+                Lancement phygital d’une perceuse-visseuse
+              </h3>
+              <p class="text-sm leading-relaxed text-navy/70">
+                Conception d’un plan de mise sur le marché associant activations en points de vente, démonstrations et relais social media.
+              </p>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-2 pt-4 border-t border-border/60">
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">Phygital</span>
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">Go-to-market</span>
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">Distribution</span>
+            </div>
+          </a>
+
+          <!-- Projet 3 : Tableau de bord -->
+          <a href="realisations/tableau-de-bord-pilotage-campagne.html" class="group flex flex-col justify-between rounded-3xl border border-border p-6 bg-surface transition-all duration-300 hover:border-brand-orange hover:bg-white card-hover">
+            <div class="flex flex-col gap-4">
+              <div class="relative overflow-hidden rounded-2xl bg-navy/5 aspect-[16/9] flex items-center justify-center border border-border">
+                <div class="flex flex-col items-center gap-2 text-navy/50">
+                  <svg class="size-8 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  <span class="text-xs font-semibold uppercase tracking-wider text-navy/70">Analytics & Pilotage</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="rounded-full bg-brand-orange/15 px-3 py-1 text-xs font-semibold text-brand-orange">Performance</span>
+                <span class="text-xs text-navy/50 font-medium">Étude de cas 03</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-navy group-hover:text-brand-orange transition-colors">
+                Tableau de bord et pilotage de campagne
+              </h3>
+              <p class="text-sm leading-relaxed text-navy/70">
+                Mise en place d’indicateurs précis pour suivre l'entonnoir commercial, mesurer les coûts d'acquisition et piloter la rentabilité en temps réel.
+              </p>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-2 pt-4 border-t border-border/60">
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">Dashboard</span>
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">CAC & ROI</span>
+              <span class="rounded-full bg-white px-2.5 py-1 text-xs text-navy/70 font-medium">CRM</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION MÉTHODOLOGIE 5 ÉTAPES -->
+    <section class="py-20 md:py-28 bg-surface border-t border-border">
+      <div class="mx-auto w-full max-w-7xl px-5 md:px-8 flex flex-col gap-12">
+        
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <p class="flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-brand-orange uppercase">
+            <span class="h-px w-8 bg-brand-orange" aria-hidden="true"></span>
+            Cadre méthodologique
+          </p>
+          <h2 class="font-serif text-4xl leading-[1.08] text-navy sm:text-5xl">
+            Cinq étapes structurées pour passer de l’intention à l’impact.
+          </h2>
+          <p class="text-navy/70 text-base leading-relaxed">
+            Un processus éprouvé qui garantit la cohérence stratégique, le respect des délais et la lisibilité des retombées chiffrées.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-5">
+          
+          <div class="flex flex-col gap-3 rounded-2xl bg-white p-6 border border-border shadow-sm">
+            <span class="font-serif text-2xl font-bold text-brand-orange">01</span>
+            <h4 class="font-bold text-navy text-base">Diagnostic</h4>
+            <p class="text-xs text-navy/70 leading-relaxed">Audit de l'existant, analyse de la concurrence et identification des freins et leviers de croissance.</p>
+          </div>
+
+          <div class="flex flex-col gap-3 rounded-2xl bg-white p-6 border border-border shadow-sm">
+            <span class="font-serif text-2xl font-bold text-brand-orange">02</span>
+            <h4 class="font-bold text-navy text-base">Stratégie</h4>
+            <p class="text-xs text-navy/70 leading-relaxed">Définition du positionnement, de la proposition de valeur et des objectifs SMART quantifiés.</p>
+          </div>
+
+          <div class="flex flex-col gap-3 rounded-2xl bg-white p-6 border border-border shadow-sm">
+            <span class="font-serif text-2xl font-bold text-brand-orange">03</span>
+            <h4 class="font-bold text-navy text-base">Planification</h4>
+            <p class="text-xs text-navy/70 leading-relaxed">Plan d'actions QQOQCCP, rétroplanning prévisionnel, briefs créatifs et allocation budgétaire.</p>
+          </div>
+
+          <div class="flex flex-col gap-3 rounded-2xl bg-white p-6 border border-border shadow-sm">
+            <span class="font-serif text-2xl font-bold text-brand-orange">04</span>
+            <h4 class="font-bold text-navy text-base">Déploiement</h4>
+            <p class="text-xs text-navy/70 leading-relaxed">Coordination opérationnelle, activation des canaux physiques/digitaux et passerelles CRM.</p>
+          </div>
+
+          <div class="flex flex-col gap-3 rounded-2xl bg-white p-6 border border-border shadow-sm">
+            <span class="font-serif text-2xl font-bold text-brand-orange">05</span>
+            <h4 class="font-bold text-navy text-base">Pilotage</h4>
+            <p class="text-xs text-navy/70 leading-relaxed">Tableaux de bord de suivi, calcul du CAC & ROI et arbitrages d'amélioration continue.</p>
+          </div>
+
+        </div>
+
+        <div class="pt-2">
+          <a href="methodologie.html" class="inline-flex items-center gap-2 rounded-full border border-navy/20 bg-white px-6 py-3 text-sm font-semibold text-navy hover:border-brand-orange hover:text-brand-orange transition-colors">
+            <span>En savoir plus sur la méthode de travail</span>
+            <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BANNIÈRE CTA -->
+    <section class="relative overflow-hidden bg-navy py-16 md:py-24 text-white">
+      <div class="decorative-ring-1"></div>
+      <div class="decorative-ring-2"></div>
+
+      <div class="relative z-10 mx-auto w-full max-w-7xl px-5 md:px-8 text-center flex flex-col items-center gap-6">
+        <span class="rounded-full bg-brand-orange/20 px-4 py-1.5 text-xs font-semibold text-brand-orange uppercase tracking-widest">
+          Prêt à concrétiser votre vision ?
+        </span>
+        <h2 class="font-serif text-4xl leading-tight sm:text-5xl md:text-6xl max-w-3xl">
+          Donnons à vos projets marketing la structure et la visibilité qu'ils méritent.
+        </h2>
+        <p class="max-w-2xl text-base text-white/75 md:text-lg">
+          Que vous souhaitiez repenser votre positionnement, lancer une nouvelle offre ou piloter une campagne 360° performante, échangeons ensemble sur vos enjeux.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+          <a href="contact.html" class="rounded-full bg-brand-orange px-8 py-3.5 text-sm font-bold text-navy shadow-lg transition-all hover:bg-white hover:scale-105">
+            Démarrer un échange
+          </a>
+          <a href="https://wa.me/22967232780" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/20 px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:border-brand-orange hover:bg-white/10">
+            Échanger directement sur WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy text-white border-t border-white/10">
+    <div class="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-2 md:px-8 lg:grid-cols-4">
+      
+      <!-- Col 1: Bio -->
+      <div class="flex flex-col gap-5 lg:col-span-1">
+        <span class="flex items-center gap-3">
+          <span class="relative flex size-10 items-center justify-center rounded-full font-serif text-lg bg-white text-navy font-bold" aria-hidden="true">
+            AD
+            <span class="absolute top-0.5 right-0.5 size-2 rounded-full bg-brand-orange"></span>
+          </span>
+          <span class="flex flex-col leading-tight">
+            <span class="text-sm font-bold text-white">Aaron Bignon DOSSOU</span>
+            <span class="text-xs text-white/60">Marketing 360°</span>
+          </span>
+        </span>
+        <p class="text-sm leading-relaxed text-white/65">
+          Stratégie, coordination et performance au service de vos projets d'entreprise et d'organisation.
+        </p>
+        <div class="flex items-center gap-3 pt-2">
+          <a href="https://www.linkedin.com/in/romuald01" target="_blank" rel="noopener noreferrer" class="flex size-9 items-center justify-center rounded-full bg-white/10 text-white hover:bg-brand-orange hover:text-navy transition-colors" aria-label="LinkedIn">
+            <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="mailto:dossouromuald39@gmail.com" class="flex size-9 items-center justify-center rounded-full bg-white/10 text-white hover:bg-brand-orange hover:text-navy transition-colors" aria-label="Email">
+            <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </a>
+          <a href="https://wa.me/22967232780" target="_blank" rel="noopener noreferrer" class="flex size-9 items-center justify-center rounded-full bg-white/10 text-white hover:bg-brand-orange hover:text-navy transition-colors" aria-label="WhatsApp">
+            <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Navigation -->
+      <div>
+        <h3 class="mb-4 text-xs font-semibold tracking-[0.2em] text-brand-orange uppercase">Navigation</h3>
+        <ul class="flex flex-col gap-2.5">
+          <li><a class="text-sm text-white/75 transition-colors hover:text-white" href="index.html">Accueil</a></li>
+          <li><a class="text-sm text-white/75 transition-colors hover:text-white" href="a-propos.html">À propos</a></li>
+          <li><a class="text-sm text-white/75 transition-colors hover:text-white" href="expertises.html">Expertises</a></li>
+          <li><a class="text-sm text-white/75 transition-colors hover:text-white" href="etude-de-cas.html">Étude de cas (E-Clean)</a></li>
+          <li><a class="text-sm text-white/75 transition-colors hover:text-white" href="realisations.html">Réalisations</a></li>
+          <li><a class="text-sm text-white/75 transition-colors hover:text-white" href="methodologie.html">Méthodologie</a></li>
+          <li><a class="text-sm text-white/75 transition-colors hover:text-white" href="formation.html">Formations</a></li>
+          <li><a class="text-sm text-white/75 transition-colors hover:text-white" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Expertises -->
+      <div>
+        <h3 class="mb-4 text-xs font-semibold tracking-[0.2em] text-brand-orange uppercase">Expertises</h3>
+        <ul class="flex flex-col gap-2.5">
+          <li><a class="text-sm text-white/75 transition-colors hover:text-white" href="expertises.html#strategie-marketing">Stratégie marketing</a></li>
+          <li><a class="text-sm text-white/75 transition-colors hover:text-white" href="expertises.html#gestion-de-projet">Gestion de projet</a></li>
+          <li><a class="text-sm text-white/75 transition-colors hover:text-white" href="expertises.html#communication-360">Communication 360°</a></li>
+          <li><a class="text-sm text-white/75 transition-colors hover:text-white" href="expertises.html#marketing-digital">Marketing digital</a></li>
+          <li><a class="text-sm text-white/75 transition-colors hover:text-white" href="expertises.html#acquisition-conversion">Acquisition et conversion</a></li>
+          <li><a class="text-sm text-white/75 transition-colors hover:text-white" href="expertises.html#analyse-performance">Analyse et pilotage</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact -->
+      <div class="flex flex-col gap-3">
+        <h3 class="mb-1 text-xs font-semibold tracking-[0.2em] text-brand-orange uppercase">Contact direct</h3>
+        <ul class="flex flex-col gap-2.5 text-sm text-white/75">
+          <li class="flex items-center gap-2">
+            <svg class="size-4 text-brand-orange shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>Grand-Popo & Cotonou, Bénin</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="size-4 text-brand-orange shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <a href="mailto:dossouromuald39@gmail.com" class="hover:text-white transition-colors">dossouromuald39@gmail.com</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="size-4 text-brand-orange shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <a href="tel:+22967232780" class="hover:text-white transition-colors">+229 67 23 27 80</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="size-4 text-brand-orange shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <a href="https://www.linkedin.com/in/romuald01" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">linkedin.com/in/romuald01</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Sub-footer -->
+    <div class="border-t border-white/10 py-6 text-center text-xs text-white/50 px-5">
+      © 2026 Aaron Bignon Romuald DOSSOU. Tous droits réservés. · Consultant indépendant en marketing 360° — Grand-Popo & Cotonou, Bénin.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
